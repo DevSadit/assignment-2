@@ -7,6 +7,7 @@
 
 /* common styles */
 .primary-btn {
+  margin-top: 32px;
   border-radius: 8px;
   background: #ff5400;
   width: 174px;
@@ -36,7 +37,7 @@
   font-weight: 800;
 }
 section {
-  width: 80%;
+  max-width: 80%;
   margin: 100px auto;
 }
 /* navbar section */
@@ -83,7 +84,18 @@ section {
 }
 /********** banner******* */
 .banner {
-  background-image: url(Images/banner.png);
+  background: linear-gradient(
+    180deg,
+    rgba(19, 19, 24, 0.8) 0%,
+    rgba(19, 19, 24, 0) 100%
+  );
+  background-image: linear-gradient(
+      180deg,
+      rgba(19, 19, 24, 0.8) 0%,
+      rgba(19, 19, 24, 0) 100%
+    ),
+    url("Images/banner.png");
+
   background-size: cover;
   background-repeat: no-repeat;
   width: 80%;
@@ -323,6 +335,24 @@ section {
   margin-bottom: 32px;
   padding-right: 55px;
 }
+
+/* JAPAN SECTION */
+.japan-container {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+}
+.japan-content {
+  width: 50%;
+}
+.japan-img {
+  width: 50%;
+}
+.japan-img img {
+  width: 100%;
+  border-radius: 10px;
+}
+
 /* Newsletter section */
 .newsletter {
   justify-content: center;
@@ -361,21 +391,21 @@ section {
   font-size: 16px;
   font-weight: 400;
   padding: 16px 250px 16px 20px;
-  
+
   border-radius: 8px;
   background: rgba(19, 19, 24, 0.05);
 }
 .n-form button {
   border-radius: 8px;
-background: #FF5400;
-padding: 15px 145px;
+  background: #ff5400;
+  padding: 15px 145px;
 
-color: #FFF;
-text-align: center;
-font-size: 20px;
-font-weight: 800;
-border: none;
-cursor: pointer;
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 800;
+  border: none;
+  cursor: pointer;
 }
 .n-txt-box input,
 button {
@@ -424,4 +454,125 @@ footer p {
   font-size: 16px;
   font-weight: 300;
   padding-bottom: 110px;
+}
+
+/* Responsive */
+/* nav responsive */
+@media screen and (max-width: 600px) {
+  .nav-bar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-logo,
+  .nav-btn {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .nav-btn ul a {
+    margin: 0;
+  }
+}
+
+/* banner */
+/* mobile responsive */
+@media screen and (max-width: 600px) {
+  
+  .banner {
+    padding: 32px 16px;
+  }
+
+  .txt-container {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding: 0
+    ;
+  }
+
+  .txt-container h1 {
+    font-size: 40px;
+    font-weight: 800;
+  }
+  .txt-container p {
+    padding-top: 32px;
+    text-align: center;
+
+  }
+
+  .inp-container {
+    flex-direction: column;
+    height: auto;
+    gap: 16px;
+    background: rgba(255, 255, 255, 0.3);
+    margin: 0 auto;
+    width: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+
+  .inp-container .wherego input {
+    text-align: center;
+      width: 100%;
+      margin: 0 auto;
+      box-sizing: border-box;
+
+  }
+  .inp-container #selectBox {
+    width:100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  .inp-container button {
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .inp-container .wherego input {
+    padding: 16px 70px; 
+  }
+  .inp-container #selectBox,
+  .inp-container button {
+    padding: 16px 100px;
+
+}
+
+}
+
+
+/* Popular tour section */
+/* mobile responsive */
+
+@media screen and (max-width: 600px) {
+  .p-tour {
+      width: 335px;
+      flex-direction: column;
+      padding: 24px;
+      margin: 0 auto;
+  }
+  .primary-header {
+      font-size: 2rem;
+      width: 180px;
+  }
+  .p-txt-box > .primary-p {
+      width: 300px;
+  }
+  .p-txt-box ul {
+      width: 280px;
+  }
+  .popular-content .popular-p-2 {
+      
+  }
+  .p-txt-box .two{
+    width: 335px;
+  }
+  .p-img-box {
+    width: 100%;
+  }
+  .p-img-box img {
+
+    width: 100%;
+  }
 }
